@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tailor_customer,access_tailor_customer,model_tailor_customer,,1,1,1,1
+access_tailor_measurement,access_tailor_measurement,model_tailor_measurement,,1,1,1,1
+access_tailor_order,access_tailor_order,model_tailor_order,,1,1,1,1
+access_tailor_order_line,access_tailor_order_line,model_tailor_order_line,,1,1,1,1
