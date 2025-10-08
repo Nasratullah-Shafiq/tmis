@@ -1,0 +1,62 @@
+<odoo>
+    <record id="action_tailor_customer" model="ir.actions.act_window">
+        <field name="name">Customers</field>
+        <field name="res_model">tailor.customer</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+
+    <record id="view_tailor_customer_tree" model="ir.ui.view">
+        <field name="name">tailor.customer.tree</field>
+        <field name="model">tailor.customer</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="city"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_tailor_customer_form" model="ir.ui.view">
+        <field name="name">tailor.customer.form</field>
+        <field name="model">tailor.customer</field>
+        <field name="arch" type="xml">
+            <form string="Customer">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                    </group>
+                    <notebook>
+                        <page string="Measurements">
+                            <field name="measurement_ids">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="clothing_type"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Orders">
+                            <field name="order_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="state"/>
+                                    <field name="delivery_date"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <field name="note"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <menuitem id="menu_tailor_customers" name="Customers" parent="menu_tailor_operations"/>
+    <act_window id="action_tailor_customer_window" name="Customers" res_model="tailor.customer" view_mode="tree,form"/>
+</odoo>
