@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_tailor_root" name="Tailor Management" sequence="10"/>
+    <menuitem id="menu_tailor_operations" name="Operations" parent="menu_tailor_root"/>
+    <menuitem id="menu_tailor_config" name="Configuration" parent="menu_tailor_root"/>
+</odoo>
